@@ -10,5 +10,6 @@ RUN echo "Downloading cmake 3.6.3:" && curl --remote-name --progress-bar https:/
     echo "Downloading cmake 3.14.7:" && curl --remote-name --progress-bar https://cmake.org/files/v3.14/cmake-3.14.7-Linux-x86_64.tar.gz && \
     echo "Downloading cmake 3.19.4:" && curl --remote-name --progress-bar https://cmake.org/files/v3.19/cmake-3.19.4-Linux-x86_64.tar.gz && \
     for file in *; do echo -n "Extracting $file: " && tar --directory=$prefix/ -xf $file && echo "done"; done && \
+    ln --symbolic --no-dereference /opt/cmake-3.11.4-Linux-x86_64/ /opt/cmake && \
     rm -rf /build/*
 
