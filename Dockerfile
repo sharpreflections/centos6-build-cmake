@@ -1,4 +1,4 @@
-FROM centos:6
+FROM quay.io/centos/centos:6
 LABEL maintainer="dennis.brendel@sharpreflections.com"
 
 ARG prefix=/opt
